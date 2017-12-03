@@ -8,9 +8,8 @@ namespace JDZ\Tree;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Test 
- * 
- * @author Joffrey Demetz <joffrey.demetz@gmail.com>
+ * @package Test
+ * @author  Joffrey Demetz <joffrey.demetz@gmail.com>
  */
 class TreeTest extends TestCase
 {

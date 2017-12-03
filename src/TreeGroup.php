@@ -17,46 +17,46 @@ abstract class TreeGroup
   use \JDZ\Utilities\Traits\Get,
       \JDZ\Utilities\Traits\Set;
   
- 	/**
+   /**
    * Is it a valid group
    * 
-	 * @var    bool 
-	 */
+   * @var    bool 
+   */
   protected $valid;
   
-	/**
+  /**
    * Group value
    * 
-	 * @var    mixed 
-	 */
+   * @var    mixed 
+   */
   protected $value;
   
-	/**
+  /**
    * Group label
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $text;
   
-	/**
+  /**
    * Children groups
    * 
-	 * @var    array 
-	 */
+   * @var    array 
+   */
   protected $groups;
   
-	/**
+  /**
    * Children items
    * 
-	 * @var    array 
-	 */
+   * @var    array 
+   */
   protected $items;
   
-	/**
-	 * Constructor
+  /**
+   * Constructor
    * 
-   * @param 	array    $properties     Key/Value pairs
-	 */
+   * @param   array    $properties     Key/Value pairs
+   */
   public function __construct(array $properties=[])
   {
     if ( !empty($properties) ){
@@ -79,23 +79,23 @@ abstract class TreeGroup
     $this->load();
   }
   
-	/**
-	 * Checks if the group is valid.
+  /**
+   * Checks if the group is valid.
    *
    * Checks if group contains children categories or pages.
    * 
-   * @return 	bool
-	 */
+   * @return   bool
+   */
   public function isValid()
   {
     return ( $this->valid === true );
   }
   
-	/**
-	 * Export group to an object
+  /**
+   * Export group to an object
    * 
-   * @return 	object
-	 */
+   * @return   object
+   */
   public function toObject()
   {
     $groups = $this->groups;
@@ -117,11 +117,11 @@ abstract class TreeGroup
     ];
   }
   
-	/**
-	 * Export group infos for an optgrouped select
+  /**
+   * Export group infos for an optgrouped select
    * 
-   * @return 	void
-	 */
+   * @return   void
+   */
   public function toSelect(array &$optgroups=[], $level=1, $root=true)
   {
     $options = [];
@@ -146,10 +146,10 @@ abstract class TreeGroup
     }
   }
   
-	/**
-	 * Load group
+  /**
+   * Load group
    * 
-   * @return 	void
-	 */
+   * @return   void
+   */
   abstract protected function load();
 }

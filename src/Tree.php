@@ -17,23 +17,23 @@ abstract class Tree
   use \JDZ\Utilities\Traits\Get,
       \JDZ\Utilities\Traits\Set;
   
- 	/**
+   /**
    * The complete tree
    * 
-	 * @var    object 
-	 */
+   * @var    object 
+   */
   protected $tree;
   
- 	/**
+   /**
    * The complete tree formatted for an optgroup select
    *
-	 * @var    object 
-	 */
+   * @var    object 
+   */
   protected $select;
   
-	/**
-	 * Constructor
-	 */
+  /**
+   * Constructor
+   */
   public function __construct(array $properties=[])
   {
     if ( !empty($properties) ){
@@ -46,30 +46,30 @@ abstract class Tree
     $this->load();
   }
   
-	/**
-	 * Get the resulting tree
+  /**
+   * Get the resulting tree
    * 
-   * @return 	object
-	 */
+   * @return   object
+   */
   public function getTree()
   {
     return $this->tree;
   }
   
-	/**
-	 * Get the resulting tree formatted for an optgrouped select
+  /**
+   * Get the resulting tree formatted for an optgrouped select
    * 
-   * @return 	array
-	 */
+   * @return   array
+   */
   public function getSelect()
   {
     return $this->select;
   }
   
-	/**
-	 * Load tree
+  /**
+   * Load tree
    * 
-   * @return 	void
-	 */
+   * @return   void
+   */
   abstract protected function load();
 }

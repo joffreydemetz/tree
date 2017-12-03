@@ -17,32 +17,32 @@ abstract class TreeItem
   use \JDZ\Utilities\Traits\Get,
       \JDZ\Utilities\Traits\Set;
   
- 	/**
+   /**
    * Is it a valid item
    * 
-	 * @var    bool 
-	 */
+   * @var    bool 
+   */
   protected $valid;
   
-	/**
+  /**
    * Item value
    * 
-	 * @var    mixed 
-	 */
+   * @var    mixed 
+   */
   protected $value;
   
-	/**
+  /**
    * Item label
    * 
-	 * @var    string 
-	 */
+   * @var    string 
+   */
   protected $text;
   
-	/**
-	 * Constructor
+  /**
+   * Constructor
    * 
-   * @param 	array    $properties     Key/Value pairs
-	 */
+   * @param   array    $properties     Key/Value pairs
+   */
   public function __construct(array $properties=[])
   {
     if ( !empty($properties) ){
@@ -63,21 +63,21 @@ abstract class TreeItem
     $this->load();
   }
   
-	/**
-	 * Checks if the item is valid.
+  /**
+   * Checks if the item is valid.
    *
-   * @return 	bool
-	 */
+   * @return   bool
+   */
   public function isValid()
   {
     return ( $this->valid === true );
   }
   
-	/**
-	 * Export item to an object
+  /**
+   * Export item to an object
    * 
-   * @return 	object
-	 */
+   * @return   object
+   */
   public function toObject()
   {
     return (object)[
@@ -87,11 +87,11 @@ abstract class TreeItem
     ];
   }
   
-	/**
-	 * Export item infos for an optcategoryed select
+  /**
+   * Export item infos for an optcategoryed select
    * 
-   * @return 	object
-	 */
+   * @return   object
+   */
   public function toSelect()
   {
     return (object)[
@@ -100,10 +100,10 @@ abstract class TreeItem
     ];
   }
   
-	/**
-	 * Load item
+  /**
+   * Load item
    * 
-   * @return 	void
-	 */
+   * @return   void
+   */
   abstract protected function load();
 }
