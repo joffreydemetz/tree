@@ -4,7 +4,7 @@
     "description": "Tree manager - List groups & items",
     "keywords": ["tree"],
     "homepage": "https://github.com/joffreydemetz/tree/",
-    "version": "1.2.1",
+    "version": "2.0.0",
     "license": "MIT",
 
     "authors": [
@@ -17,8 +17,9 @@
     ],
 
     "require": {
-        "jdz/helpers": "^1.2",
-        "jdz/utilities": "^1.2"
+        "php": "^7.1.3",
+        "jdz/helpers": "^2.0",
+        "jdz/utilities": "^2.0"
     },
 
     "autoload": {
